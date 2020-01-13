@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:01:53 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 18:23:32 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 18:30:42 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,27 +38,38 @@ Contact::~Contact(void)
 void			Contact::add(void)
 {
     std::cout << "first name :" << std::endl;
-	std::getline(std::cin, this->_first_name);
+	if (std::getline(std::cin, this->_first_name) == NULL)
+		exit(0);
     std::cout << "last name :" << std::endl;
-	std::getline(std::cin, this->_last_name);
+	if (std::getline(std::cin, this->_last_name) == NULL)
+		exit(0);
     std::cout << "nickname :" << std::endl;
-	std::getline(std::cin, this->_nickname);
+	if (std::getline(std::cin, this->_nickname) == NULL)
+		exit(0);
     std::cout << "login :" << std::endl;
-	std::getline(std::cin, this->_login);
+	if (std::getline(std::cin, this->_login) == NULL)
+		exit(0);
     std::cout << "postal adress :" << std::endl;
-	std::getline(std::cin, this->_postal_adress);
+	if (std::getline(std::cin, this->_postal_adress) == NULL)
+		exit(0);
     std::cout << "email adress :" << std::endl;
-	std::getline(std::cin, this->_email_adress);
+	if (std::getline(std::cin, this->_email_adress) == NULL)
+		exit(0);
     std::cout << "phone number :" << std::endl;
-	std::getline(std::cin, this->_phone_number);
+	if (std::getline(std::cin, this->_phone_number) == NULL)
+		exit(0);
     std::cout << "birthday date :" << std::endl;
-	std::getline(std::cin, this->_birthday_date);
+	if (std::getline(std::cin, this->_birthday_date) == NULL)
+		exit(0);
     std::cout << "favorite meal :" << std::endl;
-	std::getline(std::cin, this->_favorite_meal);
+	if (std::getline(std::cin, this->_favorite_meal) == NULL)
+		exit(0);
     std::cout << "underwear color :" << std::endl;
-	std::getline(std::cin, this->_underwear_color);
+	if (std::getline(std::cin, this->_underwear_color) == NULL)
+		exit(0);
     std::cout << "darkest secret :" << std::endl;
-	std::getline(std::cin, this->_darkest_secret);
+	if (std::getline(std::cin, this->_darkest_secret) ==  NULL)
+		exit(0);
 }
 
 void			Contact::displayAll(int i) const

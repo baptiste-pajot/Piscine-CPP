@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:17:17 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 15:23:23 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 18:26:49 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,8 @@ int main(void)
 	while (1)
 	{
 		std::cout << "Choose a command : ADD, SEARCH, EXIT" << std::endl;
-		std::getline(std::cin, action);
+		if(std::getline(std::cin, action) == NULL)
+			exit(0);
 		if (action.compare("ADD") == 0)
 			phonebook.add();
 		else if (action.compare("SEARCH") == 0)
