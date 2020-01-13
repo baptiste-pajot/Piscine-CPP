@@ -6,7 +6,7 @@
 #    By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2020/01/13 10:07:52 by bpajot       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/13 11:17:02 by bpajot      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/13 11:42:14 by bpajot      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
@@ -16,7 +16,10 @@
 NAME = phonebook
 CC = clang++
 CC_FLAGS = -Wall -Wextra -Werror
-FILES = megaphone.cpp
+FILES = main.cpp \
+		Phonebook.cpp \
+		Contact.cpp
+
 SRCS = $(FILES)
 OBJS = $(FILES:.cpp=.o)
 

@@ -6,14 +6,14 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 09:32:15 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:18:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 11:31:47 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <iostream>
 
-void main(int argc, char **argv)
+int		main(int argc, char **argv)
 {
 	int i = 0;
 	int j;
@@ -30,4 +30,5 @@ void main(int argc, char **argv)
 		}
 		std::cout << std::endl;
 	}
+	return (0);
 }

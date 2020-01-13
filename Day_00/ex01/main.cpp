@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   Contact.cpp                                      .::    .:/ .      .::   */
+/*   main.cpp                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/13 11:01:53 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:58:36 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/13 11:17:17 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/13 12:03:13 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "Contact.hpp"
+#include "Phonebook.hpp"
+#include <iostream>
+#include <string>
 
-Contact::Contact(void)
+int main(void)
 {
-	this->_first_name = "";
-	this->_last_name = "";
-	this->_nickname = "";
-	this->_login = "";
-	this->_postal_adress = "";
-	this->_email_adress = "";
-	this->_phone_number = "";
-    this->_birthday_date = "";
-	this->_favorite_meal = "";
-	this->_underwear_color = "";
-	this->_darkest_secret = "";
-	return;
-}
+	Phonebook phonebook;
+	std::string action;
 
-Contact::~Contact(void)
-{
-	return;
+	while (1)
+	{
+		std::cout << "Choose a command : ADD, SEARCH, EXIT" << std::endl;
+		std::cin >> action;
+		if (action.compare("ADD") == 0)
+			phonebook.add();
+		else if (action.compare("SEARCH") == 0)
+			phonebook.search();
+		else if (action.compare("EXIT") == 0)
+			break;
+		else
+			std::cout << "Invalid Command" << std::endl;
+	}
+	return (0);
 }
