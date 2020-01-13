@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:01:53 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 15:40:05 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 18:23:32 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -97,7 +97,7 @@ std::string		Contact::_resizeString(std::string in) const
 	else
 	{
 		resizeStr.assign(10, ' ');
-		resizeStr.replace(0, in.length(), in);
+		resizeStr.replace(10 - in.length(), in.length(), in);
 	}
 	return(resizeStr);
 }
