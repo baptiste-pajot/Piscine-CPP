@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:43:28 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 14:48:29 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 14:58:39 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -54,7 +54,7 @@ void Phonebook::search(void) const
 		std::cout << " Choose an index between 1 and " << this->_nb_contact << " :" << std::endl;
 		std::cin >> index;
 		if (index > 0 && index <= this->_nb_contact)
-			this->_contacts[i].displayOne();
+			this->_contacts[index - 1].displayOne();
 		else
 			std::cout << "This index doesn't exist" << std::endl;
 		
