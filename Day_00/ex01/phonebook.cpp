@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:43:28 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 14:58:39 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 15:45:23 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,8 +38,9 @@ void Phonebook::add(void)
 
 void Phonebook::search(void) const
 {
-	int		i = -1;
-	int		index;
+	int				i = -1;
+	std::string		indexStr;
+	int				index;
 
 	if (this->_nb_contact == 0)
 		std::cout << "Phonebook empty" << std::endl;
@@ -52,8 +53,9 @@ void Phonebook::search(void) const
 			this->_contacts[i].displayAll(i + 1);
 		std::cout << " ---------- ---------- ---------- ---------- " << std::endl;
 		std::cout << " Choose an index between 1 and " << this->_nb_contact << " :" << std::endl;
-		std::cin >> index;
-		if (index > 0 && index <= this->_nb_contact)
+		std::getline(std::cin, indexStr);
+		if (std::isdigit(indexStr[0]) && (index = std::stoi(indexStr))
+			&& index > 0 && index <= this->_nb_contact)
 			this->_contacts[index - 1].displayOne();
 		else
 			std::cout << "This index doesn't exist" << std::endl;
