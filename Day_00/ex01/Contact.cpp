@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   megaphone.cpp                                    .::    .:/ .      .::   */
+/*   Contact.cpp                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/13 09:32:15 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:18:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/13 11:01:53 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/13 11:19:22 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Contact.hpp"
 
-void main(int argc, char **argv)
+Contact::Contact(void)
 {
-	int i = 0;
-	int j;
+	return;
+}
 
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		while (++i < argc)
-		{
-			j = -1;
-			while (argv[i][++j])
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
+Contact::~Contact(void)
+{
+	return;
 }

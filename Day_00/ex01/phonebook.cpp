@@ -1,33 +1,17 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   megaphone.cpp                                    .::    .:/ .      .::   */
+/*   phonebook.cpp                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/13 09:32:15 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:18:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/13 11:17:17 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/13 11:20:09 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <iostream>
-
-void main(int argc, char **argv)
+void	main(void)
 {
-	int i = 0;
-	int j;
-
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		while (++i < argc)
-		{
-			j = -1;
-			while (argv[i][++j])
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
+	
 }

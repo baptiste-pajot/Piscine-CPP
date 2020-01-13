@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   megaphone.cpp                                    .::    .:/ .      .::   */
+/*   Contact.hpp                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/13 09:32:15 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:18:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/13 11:01:58 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/13 11:19:04 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef CONTACT_H
+# define CONTACT_H
 
-void main(int argc, char **argv)
+# include <string>
+
+class Contact
 {
-	int i = 0;
-	int j;
 
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		while (++i < argc)
-		{
-			j = -1;
-			while (argv[i][++j])
-				std::cout << (char)std::toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-}
+public:
+    Contact(void);
+    ~Contact(void);
+
+private:
+    std::string first_name;
+    std::string last_name;
+    std::string nickname;
+    std::string login;
+    std::string postal_adress;
+    std::string email_adress;
+    std::string phone_number;
+    std::string birthday_date;
+    std::string favorite_meal;
+    std::string underwear_color;
+    std::string darkest_secret;
+};
+
+#endif CONTACT_H
