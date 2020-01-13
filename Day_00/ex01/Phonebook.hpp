@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:48:16 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 12:06:20 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 12:12:37 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,6 +25,7 @@ class Phonebook
         void    search(void) const;
 
     private:
+        int     _nb_contact;
         Contact _contacts[8];
 };
 

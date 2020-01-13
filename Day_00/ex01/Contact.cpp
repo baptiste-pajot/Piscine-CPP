@@ -6,11 +6,12 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:01:53 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:58:36 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 12:57:20 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Contact.hpp"
 
 Contact::Contact(void)
@@ -32,4 +33,28 @@ Contact::Contact(void)
 Contact::~Contact(void)
 {
 	return;
+}
+
+void	Contact::add(void)
+{
+    std::cout << "first name :" << std::endl;
+	std::cin >> this->_first_name;
+    std::cout << "last name :" << std::endl;
+	std::cin >> this->_last_name;
+}
+
+void	Contact::display(int i) const
+{
+	char	format[11];
+	
+    std::cout << "|    " << i << "     ";
+	if (this->_first_name.length() > 10) {
+		this->_first_name.copy(format, 9);
+		
+	}
+	else
+		this->_first_name.copy(format, 10);
+	std::cout << "|" << format << "|";
+	std::cout << "|" << this->_last_name << "|";
+	std::cout << std::endl;
 }

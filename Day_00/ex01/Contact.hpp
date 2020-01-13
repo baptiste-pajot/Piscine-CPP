@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/13 11:01:58 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/13 11:59:14 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/13 12:38:43 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,6 +22,9 @@ class Contact
 public:
     Contact(void);
     ~Contact(void);
+
+    void add(void);
+    void display(int i) const;
 
 private:
     std::string _first_name;
