@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 12:58:37 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 15:35:44 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 15:54:10 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,6 +29,6 @@ std::string		Brain::identify(void) const
 {
 	std::ostringstream ostr;
 
-	ostr << std::hex << this;
+	ostr << this;
 	return(ostr.str());
 }
