@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 09:46:50 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:24:05 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 11:46:55 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,7 +24,7 @@ Zombie::~Zombie(void)
 	std::cout << "Zombie " << this->_name << " deleted" << std::endl;
 }
 
-void	Zombie::announce(void)
+void	Zombie::announce(void) const
 {
 	std::cout << "<" << this->_name;
 	std::cout << " (" << this->_type << ")> ";

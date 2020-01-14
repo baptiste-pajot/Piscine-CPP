@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 09:46:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:46:33 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 11:50:28 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,9 +19,10 @@
 class Zombie
 {
 	public:
-		Zombie(std::string name, std::string type);
+		Zombie(void);
 		~Zombie(void);
 
+		void	setZombie(std::string name, std::string type);
 		void	announce(void) const;
 
 	private:

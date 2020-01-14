@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   Zombie.hpp                                       .::    .:/ .      .::   */
+/*   Zombie.cpp                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/14 09:46:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:46:33 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/14 09:46:50 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/14 11:51:45 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#include "Zombie.hpp"
+#include <iostream>
 
-#	include <string>
-
-class Zombie
+Zombie::Zombie(void)
 {
-	public:
-		Zombie(std::string name, std::string type);
-		~Zombie(void);
+	std::cout << "Zombie created" << std::endl;
+}
 
-		void	announce(void) const;
+Zombie::~Zombie(void)
+{
+	std::cout << "Zombie " << this->_name << " deleted" << std::endl;
+}
 
-	private:
-		std::string		_name;
-		std::string		_type;
-};
+void	Zombie::setZombie(std::string name, std::string type)
+{
+	this->_name = name;
+	this->_type = type;
+}
 
-#endif
+void	Zombie::announce(void) const
+{
+	std::cout << "<" << this->_name;
+	std::cout << " (" << this->_type << ")> ";
+	std::cout << "Braiiiiiiinnnssss..." << std::endl;
+}

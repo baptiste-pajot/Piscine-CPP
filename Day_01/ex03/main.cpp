@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   Zombie.hpp                                       .::    .:/ .      .::   */
+/*   main.cpp                                         .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/14 09:46:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:46:33 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/14 09:46:22 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/14 12:21:34 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#include "ZombieHord.hpp"
 
-#	include <string>
-
-class Zombie
+int		main(void)
 {
-	public:
-		Zombie(std::string name, std::string type);
-		~Zombie(void);
-
-		void	announce(void) const;
-
-	private:
-		std::string		_name;
-		std::string		_type;
-};
-
-#endif
+	ZombieHord *zh1 = new ZombieHord(-1);
+	zh1->announce();
+	delete zh1;
+	ZombieHord *zh2 = new ZombieHord(3);
+	zh2->announce();
+	delete zh2;
+	ZombieHord *zh3 = new ZombieHord(10);
+	zh3->announce();
+	delete zh3;
+}

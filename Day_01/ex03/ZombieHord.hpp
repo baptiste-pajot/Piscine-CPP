@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   Zombie.hpp                                       .::    .:/ .      .::   */
+/*   ZombieHord.hpp                                   .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/14 09:46:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:46:33 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/14 11:33:25 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/14 12:20:11 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-# define ZOMBIE_H
+#ifndef ZOMBIEHORD_H
+# define ZOMBIEHORD_H
 
-#	include <string>
+# include <string>
+# include "Zombie.hpp" 
 
-class Zombie
+class ZombieHord
 {
 	public:
-		Zombie(std::string name, std::string type);
-		~Zombie(void);
+		ZombieHord(int N);
+		~ZombieHord(void);
 
-		void	announce(void) const;
+		void		announce(void) const;
 
 	private:
-		std::string		_name;
-		std::string		_type;
+		std::string	_type;
+		int			_N;
+		Zombie		*_zombieTab;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 10:01:50 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 11:25:49 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 12:23:36 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,7 +37,7 @@ Zombie*		ZombieEvent::newZombie(std::string name) const
 
 void		ZombieEvent::randomChump(void) const
 {
-	std::string		listName[9] = {"Dracula", "Mr. Adams", "Mrs. Adams", "Casper", "Mr. Wolf", "Skeleton", "The Death", "The Evil", "Frankeisten"}; 
+	std::string		listName[9] = {"Dracula", "Mr. Adams", "Mrs. Adams", "Casper", "Mr. Wolf", "Skeleton", "The Death", "The Evil", "Frankenstein"}; 
 	int				randIndex = std::rand() % 9;
 	std::string		randomName = listName[randIndex];
 	Zombie			zombie(randomName, this->_type);
