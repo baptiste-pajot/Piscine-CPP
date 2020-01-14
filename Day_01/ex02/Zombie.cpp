@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 09:46:50 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 09:58:12 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 11:24:05 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,9 +14,19 @@
 #include "Zombie.hpp"
 #include <iostream>
 
+Zombie::Zombie(std::string name, std::string type) : _name(name), _type(type)
+{
+	std::cout << "Zombie " << name << " created" << std::endl;
+}
+
+Zombie::~Zombie(void)
+{
+	std::cout << "Zombie " << this->_name << " deleted" << std::endl;
+}
+
 void	Zombie::announce(void)
 {
 	std::cout << "<" << this->_name;
 	std::cout << " (" << this->_type << ")> ";
-	std::cout << "Braiiiiiiinnnssss...";
+	std::cout << "Braiiiiiiinnnssss..." << std::endl;
 }

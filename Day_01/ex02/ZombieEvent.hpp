@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 09:59:41 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 10:14:40 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 11:23:40 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -24,11 +24,11 @@ class ZombieEvent
 		~ZombieEvent(void);
 
 		void		setZombieType(std::string type);
-		Zombie*		newZombie(std::string name);
-		Zombie*		randomChump(void);
+		Zombie*		newZombie(std::string name) const;
+		void		randomChump(void) const;
 
 	private:
-		std::string	type;
+		std::string	_type;
 };
 
 #endif
