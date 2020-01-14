@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 08:56:18 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 09:26:22 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 09:48:17 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,16 +19,16 @@
 
 class Pony
 {
-public:
-	Pony(std::string name, std::string color, int age);
-	~Pony(void);
+	public:
+		Pony(std::string name, std::string color, int age);
+		~Pony(void);
 
-	void			neigh(void);
+		void			neigh(void);
 
-private:
-	std::string		_name;
-	std::string		_color;
-	int				_age;
+	private:
+		std::string		_name;
+		std::string		_color;
+		int				_age;
 };
 
 #endif
