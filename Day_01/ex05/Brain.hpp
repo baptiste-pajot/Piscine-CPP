@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/14 12:58:32 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/14 13:05:23 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/14 14:59:10 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,7 +22,7 @@ class Brain
 		Brain();
 		~Brain();
 
-		std::string 	identify(void);
+		std::string identify(void) const;
 };
 
 #endif
