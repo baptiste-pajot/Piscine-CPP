@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/15 09:21:07 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/15 17:27:22 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/15 17:33:30 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -175,6 +175,22 @@ int			Fixed::toInt(void) const
 
 	integer = this->getRawBits() >> Fixed::_nb_frac_bits;
 	return integer;
+}
+
+Fixed 		&Fixed::max(Fixed &fixedA, Fixed &fixedB)
+{
+	if (fixedA > fixedB)
+		return fixedA;
+	else
+		return fixedB;
+} 
+
+Fixed		&Fixed::min(Fixed &fixedA, Fixed &fixedB)
+{
+	if (fixedA < fixedB)
+		return fixedA;
+	else
+		return fixedB;
 }
 
 Fixed const	&Fixed::max(const Fixed &fixedA, const Fixed &fixedB)
