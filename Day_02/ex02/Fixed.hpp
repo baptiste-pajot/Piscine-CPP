@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/15 09:22:46 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/15 16:45:40 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/15 17:26:53 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,8 +46,8 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 
-		static Fixed	&max(const Fixed &fixedA, const Fixed &fixedB); 
-		static Fixed	&min(const Fixed &fixedA, const Fixed &fixedB); 
+		static Fixed const	&max(const Fixed &fixedA, const Fixed &fixedB); 
+		static Fixed const	&min(const Fixed &fixedA, const Fixed &fixedB); 
 
 	private:
 		int					_value;

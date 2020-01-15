@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/15 09:21:07 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/15 17:03:36 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/15 17:27:22 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -137,6 +137,20 @@ Fixed			Fixed::operator++(int)
 	return ret;
 }
 
+Fixed			Fixed::operator--()
+{
+	--this->_value;
+	Fixed ret(*this);
+	return ret;
+}
+
+Fixed			Fixed::operator--(int)
+{
+	Fixed ret(*this);
+	this->_value--;
+	return ret;
+}
+
 int				Fixed::getRawBits(void) const
 {
 	return this->_value;
@@ -163,6 +177,21 @@ int			Fixed::toInt(void) const
 	return integer;
 }
 
+Fixed const	&Fixed::max(const Fixed &fixedA, const Fixed &fixedB)
+{
+	if (fixedA > fixedB)
+		return fixedA;
+	else
+		return fixedB;
+} 
+
+Fixed const	&Fixed::min(const Fixed &fixedA, const Fixed &fixedB)
+{
+	if (fixedA < fixedB)
+		return fixedA;
+	else
+		return fixedB;
+} 
 
 std::ostream	&operator<<(std::ostream &out, Fixed const &fixed)
 {
