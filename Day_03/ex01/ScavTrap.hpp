@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 13:56:00 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 14:12:44 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:26:17 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,6 @@
 class ScavTrap
 {
 	public:
-		ScavTrap(void);
 		ScavTrap(std::string name);
 		~ScavTrap(void);
 		ScavTrap(const ScavTrap &scavtrap);
@@ -29,9 +28,11 @@ class ScavTrap
 		unsigned int	meleeAttack(std::string const &target);
 		void			takeDamage(unsigned int amount);
 		void			beRepaired(unsigned int amount);
-		unsigned int	vaulthunter_dot_exe(std::string const &target);
+		void			challengeNewcomer(std::string const &target);
 
 	private:
+		ScavTrap(void);
+		
 		unsigned int	_hit_points;
 		unsigned int	_max_hit_points;
 		unsigned int	_energy_points;

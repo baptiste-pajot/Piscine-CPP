@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 13:55:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 14:16:34 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:31:47 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,21 +20,22 @@ ScavTrap::ScavTrap(void) :	_hit_points(100),
 							_max_energy_points(50),
 							_level(1),
 							_name("Unknown"),
-							_melee_attack_damage(30),
-							_ranged_attack_damage(20),
-							_armor_damage_reduction(5)
+							_melee_attack_damage(20),
+							_ranged_attack_damage(15),
+							_armor_damage_reduction(3)
 {
 	std::cout << "ScavTrap " << this->_name << " created" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name) :	_hit_points(100),
 										_max_hit_points(100),
-										_energy_points(100),
+										_energy_points(50),
+										_max_energy_points(50),
 										_level(1),
 										_name(name),
-										_melee_attack_damage(30),
-										_ranged_attack_damage(20),
-										_armor_damage_reduction(5)
+										_melee_attack_damage(20),
+										_ranged_attack_damage(15),
+										_armor_damage_reduction(3)
 {
 	std::cout << "ScavTrap " << this->_name << " created" << std::endl;
 }
@@ -113,27 +114,19 @@ void	ScavTrap::beRepaired(unsigned int amount)
 		std::cout << this->_name << " win "<< amount << " hit points" << std::endl;
 }
 
-unsigned int	ScavTrap::vaulthunter_dot_exe(std::string const &target)
+void	ScavTrap::challengeNewcomer(std::string const &target)
 {
 
-	std::string		listName[5] = {"flying", "atomic", "secret", "magic", "ultim"}; 
+	std::string		listName[5] = {	"jump on one foot",
+									"lick your elbow",
+									"sing the reverse alphabet",
+									"choose between the egg and the chicken",
+									"wait the death coming"}; 
 	int				randIndex = std::rand() % 5;
-	std::string		randAttackName = listName[randIndex];
-	int				randAmount = (randIndex + 1) * 5;
+	std::string		randChalName = listName[randIndex];
 	
-	if (this->_energy_points >= 25)
-	{
-		this->_energy_points -= 25;
-		std::cout << "SC4V-TP " << this->_name;
-		std::cout << " attacks " << target;
-		std::cout << " with " << randAttackName << " attack";
-		std::cout << ", causing " << randAmount;
-		std::cout << " points of damage !" << std::endl;
-		return randAmount;
-	}
-	else
-	{
-		std::cout << this->_name << " don't have enought energy" << std::endl;
-		return 0;
-	}
+	std::cout << "SC4V-TP " << this->_name;
+	std::cout << " challenge " << target;
+	std::cout << " with \"" << randChalName ;
+	std::cout << "\"" << std::endl;
 }

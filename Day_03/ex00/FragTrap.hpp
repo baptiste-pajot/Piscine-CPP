@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:28:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 14:08:00 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:22:16 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,6 @@
 class FragTrap
 {
 	public:
-		FragTrap(void);
 		FragTrap(std::string name);
 		~FragTrap(void);
 		FragTrap(const FragTrap &fragtrap);
@@ -32,6 +31,7 @@ class FragTrap
 		unsigned int	vaulthunter_dot_exe(std::string const &target);
 
 	private:
+		FragTrap(void);
 		unsigned int	_hit_points;
 		unsigned int	_max_hit_points;
 		unsigned int	_energy_points;

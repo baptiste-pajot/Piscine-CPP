@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.cpp                                         .::    .:/ .      .::   */
+/*   main copy.cpp                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:28:25 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 11:06:39 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:40:29 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,29 +16,28 @@
 int		main()
 {
 	unsigned int amount;
-	FragTrap a;
-	FragTrap b("Toto");
-	FragTrap c("Hercule");
-	FragTrap d(FragTrap b);
-	a = FragTrap("Zoro");
+	FragTrap a("Toto");
+	FragTrap b("Hercule");
+	FragTrap c(a);
+	FragTrap d = FragTrap("Zoro");
 
-	amount = a.rangedAttack("Toto");
+	amount = a.rangedAttack("Hercule");
 	b.takeDamage(amount);
-	amount = a.meleeAttack("Toto");
+	amount = a.meleeAttack("Hercule");
 	b.takeDamage(amount);
-	amount = a.vaulthunter_dot_exe("Toto");
+	amount = a.vaulthunter_dot_exe("Hercule");
 	b.takeDamage(amount);
 	b.beRepaired(10);
-	amount = a.rangedAttack("Toto");
+	amount = a.rangedAttack("Hercule");
 	b.takeDamage(amount);
-	amount = a.meleeAttack("Toto");
-	b.takeDamage(amount);
-	amount = a.vaulthunter_dot_exe("Toto");
+	amount = a.meleeAttack("Hercule");
 	b.takeDamage(amount);
 	amount = a.vaulthunter_dot_exe("Hercule");
-	c.takeDamage(amount);
-	amount = a.vaulthunter_dot_exe("Hercule");
-	c.takeDamage(amount);
-	amount = a.vaulthunter_dot_exe("Hercule");
-	c.takeDamage(amount);
+	b.takeDamage(amount);
+	amount = a.vaulthunter_dot_exe("Zoro");
+	d.takeDamage(amount);
+	amount = a.vaulthunter_dot_exe("Zoro");
+	d.takeDamage(amount);
+	amount = a.vaulthunter_dot_exe("Zoro");
+	d.takeDamage(amount);
 }
