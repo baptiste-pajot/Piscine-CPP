@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/15 09:21:07 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/15 16:00:27 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 08:52:06 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -82,8 +82,6 @@ int			Fixed::toInt(void) const
 
 std::ostream	&operator<<(std::ostream &out, Fixed const &fixed)
 {
-	float	fl;
-
 	out << fixed.toFloat();
 	return out;
 }

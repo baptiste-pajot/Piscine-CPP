@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/15 09:21:07 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/15 17:33:30 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 08:52:21 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -211,8 +211,6 @@ Fixed const	&Fixed::min(const Fixed &fixedA, const Fixed &fixedB)
 
 std::ostream	&operator<<(std::ostream &out, Fixed const &fixed)
 {
-	float	fl;
-
 	out << fixed.toFloat();
 	return out;
 }
