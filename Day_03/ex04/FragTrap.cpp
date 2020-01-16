@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:01:23 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 16:38:27 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:08:54 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,19 @@
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
 #include <iostream>
+
+FragTrap::FragTrap(void)	
+{
+	this->_hit_points = 100;
+	this->_max_hit_points = 100;
+	this->_energy_points = 100;
+	this->_max_energy_points = 100;
+	this->_level = 1;
+	this->_melee_attack_damage = 30;
+	this->_ranged_attack_damage = 20;
+	this->_armor_damage_reduction = 5;
+	std::cout << "FragTrap " << this->_name << " created" << std::endl;
+}
 
 FragTrap::FragTrap(std::string name) :	ClapTrap(name)	
 {

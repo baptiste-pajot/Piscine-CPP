@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:28:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 17:47:34 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:07:18 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,6 +21,7 @@ class FragTrap : public virtual ClapTrap
 {
 	public:
 		FragTrap(std::string name);
+		FragTrap(void);
 		~FragTrap(void);
 
 		unsigned int	rangedAttack(std::string const &target);

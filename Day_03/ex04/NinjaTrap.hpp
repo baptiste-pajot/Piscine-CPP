@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 16:49:08 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 17:47:18 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:05:26 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,6 +23,7 @@ class NinjaTrap : public virtual ClapTrap
 {
 	public:
 		NinjaTrap(std::string name);
+		NinjaTrap(void);
 		~NinjaTrap(void);
 
 		unsigned int	rangedAttack(std::string const &target);

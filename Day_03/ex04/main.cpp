@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:28:25 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 17:28:09 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:02:42 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 #include "NinjaTrap.hpp"
+#include "SuperTrap.hpp"
 #include <iostream>
 
 int		main()
@@ -44,6 +45,10 @@ int		main()
 
 	std::cout << std::endl;
 	
+	SuperTrap n("Wouahh");
+
+	std::cout << std::endl;
+
 	amount = a.rangedAttack("Hercule");
 	b.takeDamage(amount);
 	amount = a.meleeAttack("Hercule");
