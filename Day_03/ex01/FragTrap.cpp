@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 09:01:23 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 11:05:42 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:10:00 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,6 +17,7 @@
 FragTrap::FragTrap(void) :	_hit_points(100),
 							_max_hit_points(100),
 							_energy_points(100),
+							_max_energy_points(100),
 							_level(1),
 							_name("Unknown"),
 							_melee_attack_damage(30),
@@ -29,6 +30,7 @@ FragTrap::FragTrap(void) :	_hit_points(100),
 FragTrap::FragTrap(std::string name) :	_hit_points(100),
 										_max_hit_points(100),
 										_energy_points(100),
+										_max_energy_points(100),
 										_level(1),
 										_name(name),
 										_melee_attack_damage(30),
@@ -51,57 +53,17 @@ FragTrap::FragTrap(const FragTrap &fragtrap)
 
 FragTrap &FragTrap::operator=(const FragTrap &fragtrap)
 {
-	this->_hit_points = fragtrap.getHitPoints();
-	this->_max_hit_points = fragtrap.getMaxHitPoints();
-	this->_energy_points = fragtrap.getEnergyPoints();
-	this->_level = fragtrap.getLevel();
-	this->_name = fragtrap.getName();
-	this->_melee_attack_damage = fragtrap.getMeleeAttackDamage();
-	this->_ranged_attack_damage = fragtrap.getRangedAttackDamage();
-	this->_armor_damage_reduction = fragtrap.getArmorDamageReduction();
+	this->_hit_points = fragtrap._hit_points;
+	this->_max_hit_points = fragtrap._max_hit_points;
+	this->_energy_points = fragtrap._energy_points;
+	this->_max_energy_points = fragtrap._max_energy_points;
+	this->_level = fragtrap._level;
+	this->_name = fragtrap._name;
+	this->_melee_attack_damage = fragtrap._melee_attack_damage;
+	this->_ranged_attack_damage = fragtrap._ranged_attack_damage;
+	this->_armor_damage_reduction = fragtrap._armor_damage_reduction;
 	std::cout << "FragTrap assignation operator called" << std::endl;
 	return *this;
-}
-
-unsigned int	FragTrap::getHitPoints() const
-{
-	return this->_hit_points;
-}
-
-unsigned int	FragTrap::getMaxHitPoints() const
-{
-
-	return this->_max_hit_points;
-}
-
-unsigned int	FragTrap::getEnergyPoints() const
-{
-	return this->_energy_points;
-}
-
-unsigned int	FragTrap::getLevel() const
-{
-	return this->_level;
-}
-
-std::string		FragTrap::getName() const
-{
-	return this->_name;
-}
-
-unsigned int	FragTrap::getMeleeAttackDamage() const
-{
-	return this->_melee_attack_damage;
-}
-
-unsigned int	FragTrap::getRangedAttackDamage() const
-{
-	return this->_ranged_attack_damage;
-}
-
-unsigned int	FragTrap::getArmorDamageReduction() const
-{
-	return this->_armor_damage_reduction;
 }
 
 unsigned int	FragTrap::rangedAttack(std::string const &target)
@@ -154,7 +116,6 @@ void	FragTrap::beRepaired(unsigned int amount)
 
 unsigned int	FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
-
 	std::string		listName[5] = {"flying", "atomic", "secret", "magic", "ultim"}; 
 	int				randIndex = std::rand() % 5;
 	std::string		randAttackName = listName[randIndex];

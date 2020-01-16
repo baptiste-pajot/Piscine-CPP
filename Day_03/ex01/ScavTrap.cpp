@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 13:55:57 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 14:01:35 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 14:16:34 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,8 @@
 
 ScavTrap::ScavTrap(void) :	_hit_points(100),
 							_max_hit_points(100),
-							_energy_points(100),
+							_energy_points(50),
+							_max_energy_points(50),
 							_level(1),
 							_name("Unknown"),
 							_melee_attack_damage(30),
@@ -51,57 +52,17 @@ ScavTrap::ScavTrap(const ScavTrap &scavtrap)
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &scavtrap)
 {
-	this->_hit_points = scavtrap.getHitPoints();
-	this->_max_hit_points = scavtrap.getMaxHitPoints();
-	this->_energy_points = scavtrap.getEnergyPoints();
-	this->_level = scavtrap.getLevel();
-	this->_name = scavtrap.getName();
-	this->_melee_attack_damage = scavtrap.getMeleeAttackDamage();
-	this->_ranged_attack_damage = scavtrap.getRangedAttackDamage();
-	this->_armor_damage_reduction = scavtrap.getArmorDamageReduction();
+	this->_hit_points = scavtrap._hit_points;
+	this->_max_hit_points = scavtrap._max_hit_points;
+	this->_energy_points = scavtrap._energy_points;
+	this->_max_energy_points = scavtrap._max_energy_points;
+	this->_level = scavtrap._level;
+	this->_name = scavtrap._name;
+	this->_melee_attack_damage = scavtrap._melee_attack_damage;
+	this->_ranged_attack_damage = scavtrap._ranged_attack_damage;
+	this->_armor_damage_reduction = scavtrap._armor_damage_reduction;
 	std::cout << "ScavTrap assignation operator called" << std::endl;
 	return *this;
-}
-
-unsigned int	ScavTrap::getHitPoints() const
-{
-	return this->_hit_points;
-}
-
-unsigned int	ScavTrap::getMaxHitPoints() const
-{
-
-	return this->_max_hit_points;
-}
-
-unsigned int	ScavTrap::getEnergyPoints() const
-{
-	return this->_energy_points;
-}
-
-unsigned int	ScavTrap::getLevel() const
-{
-	return this->_level;
-}
-
-std::string		ScavTrap::getName() const
-{
-	return this->_name;
-}
-
-unsigned int	ScavTrap::getMeleeAttackDamage() const
-{
-	return this->_melee_attack_damage;
-}
-
-unsigned int	ScavTrap::getRangedAttackDamage() const
-{
-	return this->_ranged_attack_damage;
-}
-
-unsigned int	ScavTrap::getArmorDamageReduction() const
-{
-	return this->_armor_damage_reduction;
 }
 
 unsigned int	ScavTrap::rangedAttack(std::string const &target)
