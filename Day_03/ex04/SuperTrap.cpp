@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:41:42 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 18:04:42 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:38:22 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,7 @@
 #include "SuperTrap.hpp"
 #include <iostream>
 
-SuperTrap::SuperTrap(std::string name) : ClapTrap(name)
+SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTrap(name)
 {
 	this->_hit_points = FragTrap::_hit_points;
 	this->_max_hit_points = FragTrap::_max_hit_points;
@@ -37,12 +37,11 @@ SuperTrap::~SuperTrap(void)
 unsigned int	SuperTrap::rangedAttack(std::string const &target)
 {
 	std::cout << "SUPER-TP " << this->_name;
-	return FragTrap::rangedAttack(target);
+	return ClapTrap::rangedAttack(target);
 }
 
 unsigned int	SuperTrap::meleeAttack(std::string const &target)
 {
 	std::cout << "SUPER-TP " << this->_name;
-	return NinjaTrap::meleeAttack(target);
+	return ClapTrap::meleeAttack(target);
 }
-

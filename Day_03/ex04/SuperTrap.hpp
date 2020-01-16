@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:41:49 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 17:59:02 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:39:01 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@
 # include "NinjaTrap.hpp"
 # include <string>
 
-class SuperTrap : public FragTrap, public NinjaTrap
+class SuperTrap : public NinjaTrap, public FragTrap
 {
 	public:
 		SuperTrap(std::string name);
@@ -27,10 +27,5 @@ class SuperTrap : public FragTrap, public NinjaTrap
 
 		unsigned int	rangedAttack(std::string const &target);
 		unsigned int	meleeAttack(std::string const &target);
-		unsigned int	vaulthunter_dot_exe(std::string const &target);
-		unsigned int	ninjaShoebox(NinjaTrap &target);
-		unsigned int	ninjaShoebox(FragTrap &target);
-		unsigned int	ninjaShoebox(ScavTrap &target);
-		unsigned int	ninjaShoebox(ClapTrap &target);
 };
 #endif
