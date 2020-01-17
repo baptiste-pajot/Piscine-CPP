@@ -6,13 +6,15 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:15:54 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 14:24:01 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 15:11:21 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "AWeapon.cpp"
-#include <iostream>
+#ifndef AWEAPON_H
+# define AWEAPON_H
+
+# include <iostream>
 
 class AWeapon
 {
@@ -21,11 +23,19 @@ class AWeapon
 		AWeapon(const AWeapon &aweapon);
 		AWeapon &operator=(const AWeapon &aweapon);
 
+	protected:
+		std::string		_name;
+		int				_damage;
+		int				_apcost;
+
 	public:
-		AWeapon(std::string const & name, int apcost, int damage);
-		[...] ~AWeapon();
-		std::string [...] getName() const;
-		int getAPCost() const;
-		int getDamage() const;
-		[...] void attack() const = 0;
+		AWeapon(std::string const &name, int apcost, int damage);
+		virtual ~AWeapon();
+
+		std::string 		getName(void) const;
+		int					getAPCost(void) const;
+		int					getDamage(void) const;
+		virtual void		attack(void) const = 0;
 };
+
+#endif

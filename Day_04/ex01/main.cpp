@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:13:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 14:15:40 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 14:34:30 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,7 +18,7 @@
 
 int main()
 {
-	Character* zaz = new Character(``zaz'');
+	Character* zaz = new Character("zaz");
 	std::cout << *zaz;
 	Enemy* b = new RadScorpion();
 	AWeapon* pr = new PlasmaRifle();
