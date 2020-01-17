@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 10:53:20 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 11:56:18 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 13:19:11 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define SORCERER_H
 
 #include <iostream>
+#include "Victim.hpp"
 
 class Sorcerer
 {
@@ -27,6 +28,7 @@ class Sorcerer
 		void			introduce(void) const;
 		std::string		getName(void) const;
 		std::string		getTitle(void) const;
+		void			polymorph(Victim const &victim) const;
 
 	private:
 		Sorcerer(void);
