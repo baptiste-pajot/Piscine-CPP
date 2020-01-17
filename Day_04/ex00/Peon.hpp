@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 13:24:06 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 13:40:49 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 14:30:42 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,7 +21,7 @@ class Peon : public Victim
 {
 	public:
 		Peon(std::string name);
-		~Peon(void);
+		virtual ~Peon(void);
 
 		virtual void	getPolymorphed(void) const;
 

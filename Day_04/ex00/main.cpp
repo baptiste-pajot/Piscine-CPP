@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 11:08:49 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 14:07:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 14:31:00 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@ class Looser : public Victim
 {
 	public:
 		Looser(std::string name);
-		~Looser(void);
+		virtual ~Looser(void);
 		virtual void	getPolymorphed(void) const;
 	private:
 		std::string _name;
