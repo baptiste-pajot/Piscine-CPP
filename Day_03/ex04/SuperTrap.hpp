@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:41:49 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 18:39:01 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/16 18:53:06 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,7 @@
 # include "NinjaTrap.hpp"
 # include <string>
 
-class SuperTrap : public NinjaTrap, public FragTrap
+class SuperTrap : public FragTrap, public NinjaTrap
 {
 	public:
 		SuperTrap(std::string name);

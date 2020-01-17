@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 17:41:42 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 18:38:22 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 09:08:57 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,14 +16,15 @@
 #include "SuperTrap.hpp"
 #include <iostream>
 
-SuperTrap::SuperTrap(std::string name) : ClapTrap(name), NinjaTrap(name), FragTrap(name)
+SuperTrap::SuperTrap(std::string name) : ClapTrap(name)
 {
-	this->_hit_points = FragTrap::_hit_points;
-	this->_max_hit_points = FragTrap::_max_hit_points;
+	this->_name = name;
 	this->_energy_points = NinjaTrap::_energy_points;
 	this->_max_energy_points = NinjaTrap::_max_energy_points;
 	this->_level = 1;
 	this->_melee_attack_damage = NinjaTrap::_melee_attack_damage;
+	this->_hit_points = FragTrap::_hit_points;
+	this->_max_hit_points = FragTrap::_max_hit_points;
 	this->_ranged_attack_damage = FragTrap::_ranged_attack_damage;
 	this->_armor_damage_reduction = FragTrap::_armor_damage_reduction;
 	std::cout << "SuperTrap " << this->_name << " created" << std::endl;

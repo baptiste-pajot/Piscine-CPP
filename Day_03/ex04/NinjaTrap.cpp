@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/16 16:49:02 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/16 18:08:45 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 08:56:18 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -18,14 +18,9 @@
 
 NinjaTrap::NinjaTrap(void)	
 {
-	this->_hit_points = 60;
-	this->_max_hit_points = 60;
 	this->_energy_points = 120;
 	this->_max_energy_points = 120;
-	this->_level = 1;
 	this->_melee_attack_damage = 60;
-	this->_ranged_attack_damage = 5;
-	this->_armor_damage_reduction = 0;
 	std::cout << "NinjaTrap " << this->_name << " created" << std::endl;
 }
 
