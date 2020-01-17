@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:13:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 18:41:20 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:53:54 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -79,6 +79,13 @@ int main()
 	toto->equip(pf);
 	std::cout << *toto;
 	toto->attack(c);
+	std::cout << *toto;
+	toto->attack(c);
+	std::cout << *toto;
+	toto->attack(c);
+	std::cout << *toto;
+	toto->attack(c);
+	std::cout << "end" <<std::endl;
 
 	delete(zaz);
 	delete(toto);
