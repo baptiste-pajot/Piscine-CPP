@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:13:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 18:36:29 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:41:20 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 #include "RadScorpion.hpp"
 #include "PlasmaRifle.hpp"
 #include "PowerFist.hpp"
+#include "SuperMutant.hpp"
 
 int main()
 {
@@ -22,6 +23,7 @@ int main()
 	Character* toto = new Character("toto");
 	std::cout << *zaz;
 	Enemy* b = new RadScorpion();
+	Enemy* c = new SuperMutant();
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
 	zaz->equip(pr);
@@ -68,11 +70,21 @@ int main()
 	std::cout << std::endl;
 	
 	std::cout << *toto;
-	toto->attack(b);
+	toto->attack(c);
 	std::cout << *toto;
 	toto->equip(pr);
 	std::cout << *toto;
-	toto->attack(b);
+	toto->attack(c);
 	std::cout << *toto;
+	toto->equip(pf);
+	std::cout << *toto;
+	toto->attack(c);
+
+	delete(zaz);
+	delete(toto);
+	delete(b);
+	delete(c);
+	delete(pf);
+	delete(pr);
 	return 0;
 }
