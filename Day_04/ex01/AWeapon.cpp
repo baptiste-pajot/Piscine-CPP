@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:35 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:23:30 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:13:55 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,6 +16,11 @@
 AWeapon::AWeapon(std::string const &name, int apcost, int damage) : _name(name), _apcost(apcost), _damage(damage)
 {
 }
+
+AWeapon::~AWeapon(void)
+{
+}
+
 
 std::string		AWeapon::getName() const
 {

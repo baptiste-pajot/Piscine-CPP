@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:18 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:28:10 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:35:55 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,7 +23,6 @@ class PowerFist : public AWeapon
 		PowerFist(void);
 		virtual ~PowerFist(void);
 
-		std::string virtual	getName(void) const;
 		virtual void		attack(void) const;
 };
 

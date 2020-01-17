@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:15:54 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:11:21 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:36:06 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,12 +25,12 @@ class AWeapon
 
 	protected:
 		std::string		_name;
-		int				_damage;
 		int				_apcost;
+		int				_damage;
 
 	public:
 		AWeapon(std::string const &name, int apcost, int damage);
-		virtual ~AWeapon();
+		virtual ~AWeapon(void);
 
 		std::string 		getName(void) const;
 		int					getAPCost(void) const;

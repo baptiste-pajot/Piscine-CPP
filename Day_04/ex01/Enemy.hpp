@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:08 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:32:39 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:11:07 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -29,7 +29,7 @@ class Enemy
 
 	public:
 		Enemy(int hp, std::string const &type);
-		virtual ~Enemy();
+		virtual ~Enemy(void);
 
 		std::string getType(void) const;
 		int			getHP(void) const;

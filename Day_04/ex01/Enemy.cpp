@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:46 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:34:49 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:12:12 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,6 +14,10 @@
 #include "Enemy.hpp"
 
 Enemy::Enemy(int hp, std::string const &type) : _hp(hp), _type(type)
+{
+}
+
+Enemy::~Enemy(void)
 {
 }
 

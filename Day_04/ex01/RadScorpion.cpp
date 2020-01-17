@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:58 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 15:40:36 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 17:41:58 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,6 +16,10 @@
 RadScorpion::RadScorpion(void) : Enemy(80, "RadScorpion")
 {
 	std::cout << "* click click click *" << std::endl;
+}
+
+RadScorpion::~RadScorpion(void)
+{
 }
 
 void	RadScorpion::takeDamage(int damage)
