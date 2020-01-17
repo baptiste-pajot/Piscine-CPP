@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 11:08:49 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 11:09:59 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 12:00:52 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,4 +16,7 @@
 int		main(void)
 {
 	Sorcerer a = Sorcerer("Merlin", "magus");
+
+	a.introduce();
+	std::cout << a;
 }
