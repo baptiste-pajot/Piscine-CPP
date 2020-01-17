@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:13:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 14:34:30 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:20:11 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,6 +19,7 @@
 int main()
 {
 	Character* zaz = new Character("zaz");
+	Character* toto = new Character("toto");
 	std::cout << *zaz;
 	Enemy* b = new RadScorpion();
 	AWeapon* pr = new PlasmaRifle();
@@ -34,5 +35,21 @@ int main()
 	std::cout << *zaz;
 	zaz->attack(b);
 	std::cout << *zaz;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	std::cout << b->getType() << " have " <<b->getHP() << " HP" << std::endl;
+	std::cout << *zaz;
+	zaz->recoverAP();
+	std::cout << *zaz;
+	zaz->recoverAP();
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	std::cout << *toto;
+	toto->attack(b);
+	std::cout << *toto;
 	return 0;
 }

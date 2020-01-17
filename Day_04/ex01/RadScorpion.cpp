@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:58 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 17:41:58 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:08:40 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,7 @@ RadScorpion::RadScorpion(void) : Enemy(80, "RadScorpion")
 
 RadScorpion::~RadScorpion(void)
 {
+	std::cout << "* SPROTCH *" << std::endl;
 }
 
 void	RadScorpion::takeDamage(int damage)
@@ -28,8 +29,6 @@ void	RadScorpion::takeDamage(int damage)
 	{
 		this->_hp -= damage;
 		if (this->_hp <= 0)
-		{
-			std::cout << "* SPROTCH *" << std::endl;
-		}
+			RadScorpion::~RadScorpion();
 	}
 }

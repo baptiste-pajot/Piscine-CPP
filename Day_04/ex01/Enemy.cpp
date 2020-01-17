@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:46 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 17:12:12 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:11:47 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,6 +37,6 @@ void			Enemy::takeDamage(int damage)
 	{
 		this->_hp -= damage;
 		if (this->_hp <= 0)
-			std::cout << "Enemy is dead" << std::endl;
+			Enemy::~Enemy();
 	}
 }

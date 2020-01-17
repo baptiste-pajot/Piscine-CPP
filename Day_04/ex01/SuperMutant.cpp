@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:17:01 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 17:42:31 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:09:09 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,7 @@ SuperMutant::SuperMutant(void) : Enemy(170, "SuperMutant")
 
 SuperMutant::~SuperMutant(void)
 {
+	std::cout << "Aaargh ..." << std::endl;
 }
 
 void	SuperMutant::takeDamage(int damage)
@@ -28,8 +29,6 @@ void	SuperMutant::takeDamage(int damage)
 	{
 		this->_hp -= damage - 3;
 		if (this->_hp <= 0)
-		{
-			std::cout << "Aaargh ..." << std::endl;
-		}
+			SuperMutant::~SuperMutant();
 	}
 }
