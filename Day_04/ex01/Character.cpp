@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:16:41 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 17:54:15 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:37:39 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,7 +51,9 @@ void	Character::equip(AWeapon *aweapon)
 
 void	Character::attack(Enemy *enemy)
 {
-	if (this->_ap > 0 && this->_aweapon != NULL && enemy != NULL)
+	if (this->_aweapon != NULL 
+		&& enemy != NULL
+		&& this->_ap >= this->_aweapon->getAPCost()) 
 	{
 		std::cout << this->_name << " attacks ";
 		std::cout << enemy->getType() << " with a ";

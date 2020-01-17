@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/17 14:13:56 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/17 18:20:11 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/17 18:36:29 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,6 +38,7 @@ int main()
 
 	std::cout << std::endl;
 	std::cout << std::endl;
+	
 	std::cout << b->getType() << " have " <<b->getHP() << " HP" << std::endl;
 	std::cout << *zaz;
 	zaz->recoverAP();
@@ -48,6 +49,28 @@ int main()
 	std::cout << *zaz;
 	zaz->attack(b);
 	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+	zaz->attack(b);
+	std::cout << *zaz;
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+	
+	std::cout << *toto;
+	toto->attack(b);
+	std::cout << *toto;
+	toto->equip(pr);
 	std::cout << *toto;
 	toto->attack(b);
 	std::cout << *toto;
