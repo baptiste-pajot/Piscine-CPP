@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:34:39 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 15:34:09 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:18:52 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,6 +15,7 @@
 # define BUREAUCRAT_HPP
 
 # include <iostream>
+# include "Form.hpp"
 
 class Bureaucrat
 {
@@ -29,6 +30,8 @@ class Bureaucrat
 		int					getGrade(void) const;
 		void				incrementGrade(void);
 		void				decrementGrade(void);
+
+		void				signeForm(Form const &form);
 
 	private:
 		Bureaucrat(void);

@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:18 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 16:26:57 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:18:40 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,20 +15,23 @@
 # define FORM_HPP
 
 # include <iostream>
+# include "Bureaucrat.hpp"
 
 class Form
 {
 	public:
 
-		Form(std::string const name, int grade);
+		Form(std::string const name, int gradeSign, int gradeExecut);
 		~Form(void);
 		Form(const Form &form);
 		Form &operator=(const Form &form);
 
 		std::string const	getName(void) const;
 		bool				getsigned(void) const;
-		const int			getGradeSign(void) const;
-		const int			getGradeExecut(void) const;
+		int					getGradeSign(void) const;
+		int					getGradeExecut(void) const;
+
+		void				beSigned(Bureaucrat const &bureaucrat);
 
 	private:
 		Form(void);
@@ -52,4 +55,5 @@ class Form
 };
 
 std::ostream	&operator<<(std::ostream &out, Form const &form);
+
 #endif

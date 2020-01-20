@@ -6,22 +6,22 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:33:30 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 15:29:29 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 16:35:10 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name)
+Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name), _grade(150)
 {
 	try 
 	{
-		this->_grade = grade;
-		if (this->_grade < 1)
+		if (grade < 1)
 			throw Bureaucrat::GradeTooHighException();
-		else if (this->_grade > 150)
+		else if (grade > 150)
 			throw Bureaucrat::GradeTooLowException();
+		this->_grade = grade;
 		std::cout << "Bureaucrat called " << this->_name;
 		std::cout << " was created with grade " << this->_grade << std::endl;
 	}
