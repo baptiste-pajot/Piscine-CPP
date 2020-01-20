@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:34:39 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:34:38 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:21:48 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,6 +33,7 @@ class Bureaucrat
 		void				decrementGrade(void);
 
 		void				signeForm(Form &form);
+		void				executeForm(Form const &form);
 
 	private:
 		Bureaucrat(void);

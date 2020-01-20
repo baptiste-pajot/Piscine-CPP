@@ -6,13 +6,15 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:36:55 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 18:00:19 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:00:06 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int main(void)
 {
@@ -43,9 +45,9 @@ int main(void)
 
 	std::cout << std::endl;
 
-	Form f("form1", 0, 75);
-	Form g("form2", 3, 151);
-	Form h("form3", 1, 150);
+	ShrubberyCreationForm f("target1");
+	RobotomyRequestForm g("target2");
+	PresidentialPardonForm h("target3");
 
 	std::cout << std::endl;
 

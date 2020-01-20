@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 18:47:49 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 18:52:14 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:08:27 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -19,7 +19,13 @@
 
 class PresidentialPardonForm : public Form
 {
+	public:
+		PresidentialPardonForm(std::string target);
+		virtual ~PresidentialPardonForm(void);
+		PresidentialPardonForm(const PresidentialPardonForm &form);
+		PresidentialPardonForm &operator=(const PresidentialPardonForm &form);
 
+		virtual	void 		action(void) const;
 };
 
 #endif

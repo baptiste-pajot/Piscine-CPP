@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ShrubberyCreationForm.hpp                        .::    .:/ .      .::   */
+/*   ShrubberyCreationFormShrubberyCreationForm.hpp                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
@@ -19,7 +19,13 @@
 
 class ShrubberyCreationForm : public Form
 {
+	public:
+		ShrubberyCreationForm(std::string target);
+		virtual ~ShrubberyCreationForm(void);
+		ShrubberyCreationForm(const ShrubberyCreationForm &form);
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &form);
 
+		virtual	void 		action(void) const;
 };
 
 #endif

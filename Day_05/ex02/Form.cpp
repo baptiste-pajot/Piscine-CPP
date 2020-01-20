@@ -6,14 +6,14 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:02 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 18:00:48 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:25:42 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(std::string const name, int gradeSign, int gradeExecut) : _name(name), _signed(false), _gradeSign(gradeSign), _gradeExecut(gradeExecut)
+Form::Form(std::string const name, std::string const target, int gradeSign, int gradeExecut) : _name(name), _target(target), _signed(false), _gradeSign(gradeSign), _gradeExecut(gradeExecut)
 {
 	try 
 	{
@@ -22,6 +22,7 @@ Form::Form(std::string const name, int gradeSign, int gradeExecut) : _name(name)
 		else if (this->_gradeSign > 150 || this->_gradeExecut > 150)
 			throw Form::GradeTooLowException();
 		std::cout << "Form called " << this->_name;
+		std::cout << " with target " << this->_target;
 		std::cout << " was created with grade required to sign " << this->_gradeSign;
 		std::cout << " and grade required to execut " << this->_gradeExecut << std::endl;
 	}
@@ -50,6 +51,11 @@ const char *Form::GradeTooLowException::what(void) const throw()
 std::string const	Form::getName(void) const
 {
 	return this->_name;
+}
+
+std::string const	Form::getTarget(void) const
+{
+	return this->_target;
 }
 
 bool				Form::getsigned(void) const
