@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:02 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:58:24 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 18:00:48 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -79,6 +79,6 @@ std::ostream	&operator<<(std::ostream &out, Form const &form)
 {
 	out <<  form.getName() << " form ";
 	out << "with grade required to sign " << form.getGradeSign();
-	out << "and grade required to execut " << form.getGradeExecut() << "." ;
+	out << " and grade required to execut " << form.getGradeExecut() << "." ;
 	return out;
 }

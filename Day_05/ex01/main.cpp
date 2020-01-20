@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:36:55 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:50:27 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 18:00:19 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -46,6 +46,10 @@ int main(void)
 	Form f("form1", 0, 75);
 	Form g("form2", 3, 151);
 	Form h("form3", 1, 150);
+
+	std::cout << std::endl;
+
+	std::cout << h << std::endl;
 
 	std::cout << std::endl;
 
