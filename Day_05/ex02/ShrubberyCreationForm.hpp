@@ -15,6 +15,7 @@
 # define SHRUBERRYCREATIONFORM_HPP
 
 # include <iostream>
+# include <fstream>
 # include "Form.hpp"
 
 class ShrubberyCreationForm : public Form

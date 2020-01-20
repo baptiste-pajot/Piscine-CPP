@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:18 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 20:24:06 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:45:58 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -28,7 +28,7 @@ class Form
 
 		std::string const	getName(void) const;
 		std::string const	getTarget(void) const;
-		bool				getsigned(void) const;
+		bool				getSigned(void) const;
 		int					getGradeSign(void) const;
 		int					getGradeExecut(void) const;
 
@@ -42,6 +42,11 @@ class Form
 				virtual const char* what(void) const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class NotSignedException : public std::exception
 		{
 			public:
 				virtual const char* what(void) const throw();

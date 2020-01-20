@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:36:55 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 20:00:06 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 21:21:04 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -51,12 +51,46 @@ int main(void)
 
 	std::cout << std::endl;
 
-	std::cout << h << std::endl;
-
-	std::cout << std::endl;
-
 	b.signeForm(h);
 	c.signeForm(h);
 
 	std::cout << std::endl;
+
+	std::cout << f << std::endl;
+	std::cout << g << std::endl;
+	std::cout << h << std::endl;
+
+	std::cout << std::endl;
+
+	f.action();
+	g.action();
+	g.action();
+	g.action();
+	g.action();
+	h.action();
+
+	std::cout << std::endl;
+
+	f.execute(b);
+	g.execute(b);
+	h.execute(b);
+
+	std::cout << std::endl;
+
+	b.signeForm(f);
+	b.signeForm(g);
+
+	std::cout << std::endl;
+
+	f.execute(b);
+	g.execute(b);
+	h.execute(b);
+	
+	std::cout << std::endl;
+
+	b.executeForm(g);
+	c.executeForm(h);
+	
+	std::cout << std::endl;
+
 }

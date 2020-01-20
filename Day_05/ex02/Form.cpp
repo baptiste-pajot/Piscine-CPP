@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:02 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 20:25:42 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 21:07:18 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -48,6 +48,11 @@ const char *Form::GradeTooLowException::what(void) const throw()
 	return "Form: The grade is too low.";
 }
 
+const char *Form::NotSignedException::what(void) const throw()
+{
+	return "Form: Not signed.";
+}
+
 std::string const	Form::getName(void) const
 {
 	return this->_name;
@@ -58,7 +63,7 @@ std::string const	Form::getTarget(void) const
 	return this->_target;
 }
 
-bool				Form::getsigned(void) const
+bool				Form::getSigned(void) const
 {
 	return this->_signed;
 }
@@ -76,15 +81,38 @@ int					Form::getGradeExecut(void) const
 void				Form::beSigned(Bureaucrat const &bureaucrat)
 {
 	if (bureaucrat.getGrade() <= this->_gradeSign)
+	{
 		this->_signed = true;
+		std::cout << "Form signed" << std::endl;
+	}
 	else
 		throw Form::GradeTooLowException();
 }
 
+void				Form::execute(Bureaucrat const &executor) const
+{
+	try
+	{
+		if (this->getSigned())
+		{
+			if (executor.getGrade() <= this->getGradeExecut())
+				this->action();
+			else
+				throw Form::GradeTooLowException();
+		}
+		else
+			throw Form::NotSignedException();
+	}
+	catch(const std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+}
+
 std::ostream	&operator<<(std::ostream &out, Form const &form)
 {
-	out <<  form.getName() << " form ";
-	out << "with grade required to sign " << form.getGradeSign();
+	out <<  form.getName() << " form with " << form.getTarget();
+	out << " with grade required to sign " << form.getGradeSign();
 	out << " and grade required to execut " << form.getGradeExecut() << "." ;
 	return out;
 }

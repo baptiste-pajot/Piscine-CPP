@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 18:47:58 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 20:11:49 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:39:39 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,5 +23,14 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 
 void	ShrubberyCreationForm::action(void) const
 {
-
+	std::ofstream	ofs(this->getTarget() + "_schrubbery");
+	if (ofs.is_open() > 0 )
+	{
+		ofs << "  ____   " << std::endl;
+		ofs << " /    \\  " << std::endl;
+		ofs << "|      | " << std::endl;
+		ofs << " \\____/  " << std::endl;
+		ofs << "   ||    " << std::endl;
+		ofs << "   ||    " << std::endl;
+	}
 }

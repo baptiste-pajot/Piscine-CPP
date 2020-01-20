@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:33:30 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:55:46 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 21:19:57 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -101,6 +101,11 @@ void		Bureaucrat::signeForm(Form &form)
 		std::cout << e.what() << std::endl;
 	}
 
+}
+
+void			Bureaucrat::executeForm(Form const &form)
+{
+	form.execute(*this);
 }
 
 std::ostream	&operator<<(std::ostream &out, Bureaucrat const &bureaucrat)

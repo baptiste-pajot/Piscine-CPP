@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 18:47:53 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 20:33:00 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 20:58:06 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -25,7 +25,7 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
 
 void	RobotomyRequestForm::action(void) const
 {
-	std::cout << "\a\a\a\a\a\a\a\a\a\a\a\a\a\a"; //drilling noise
+	std::cout << "\a"; //drilling noise
 	RobotomyRequestForm::halfTime = !RobotomyRequestForm::halfTime;
 	if (RobotomyRequestForm::halfTime)
 		std::cout << this->getTarget() << "  has been robotomized successfully." << std::endl;
