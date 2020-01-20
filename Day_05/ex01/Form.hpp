@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:18 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:18:40 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:38:44 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -33,15 +33,6 @@ class Form
 
 		void				beSigned(Bureaucrat const &bureaucrat);
 
-	private:
-		Form(void);
-
-		std::string	const	_name;
-		bool				_signed;
-		const int			_gradeSign;
-		const int			_gradeExecut;
-
-		
 		class GradeTooHighException : public std::exception
 		{
 			public:
@@ -52,6 +43,14 @@ class Form
 			public:
 				virtual const char* what(void) const throw();
 		};
+
+	private:
+		Form(void);
+
+		std::string	const	_name;
+		bool				_signed;
+		const int			_gradeSign;
+		const int			_gradeExecut;
 };
 
 std::ostream	&operator<<(std::ostream &out, Form const &form);

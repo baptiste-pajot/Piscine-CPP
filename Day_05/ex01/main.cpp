@@ -6,12 +6,13 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:36:55 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 15:34:57 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:50:27 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main(void)
 {
@@ -39,6 +40,17 @@ int main(void)
 	std::cout << d << std::endl;
 	d.incrementGrade();
 	std::cout << d << std::endl;
+
+	std::cout << std::endl;
+
+	Form f("form1", 0, 75);
+	Form g("form2", 3, 151);
+	Form h("form3", 1, 150);
+
+	std::cout << std::endl;
+
+	b.signeForm(h);
+	c.signeForm(h);
 
 	std::cout << std::endl;
 }

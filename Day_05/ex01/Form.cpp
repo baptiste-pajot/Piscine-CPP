@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 16:21:02 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 17:12:13 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:58:24 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,6 +37,16 @@ Form::~Form()
 	std::cout << " was deleted" << std::endl;
 }
 
+const char *Form::GradeTooHighException::what(void) const throw()
+{
+	return "Form: The grade is too high.";
+}
+
+const char *Form::GradeTooLowException::what(void) const throw()
+{
+	return "Form: The grade is too low.";
+}
+
 std::string const	Form::getName(void) const
 {
 	return this->_name;
@@ -55,6 +65,14 @@ int					Form::getGradeSign(void) const
 int					Form::getGradeExecut(void) const
 {
 	return this->_gradeExecut;
+}
+
+void				Form::beSigned(Bureaucrat const &bureaucrat)
+{
+	if (bureaucrat.getGrade() <= this->_gradeSign)
+		this->_signed = true;
+	else
+		throw Form::GradeTooLowException();
 }
 
 std::ostream	&operator<<(std::ostream &out, Form const &form)

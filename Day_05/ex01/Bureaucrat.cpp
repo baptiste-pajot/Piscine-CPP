@@ -6,12 +6,13 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/20 13:33:30 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 16:35:10 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/20 17:55:46 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(std::string const name, int grade) : _name(name), _grade(150)
 {
@@ -55,7 +56,7 @@ void Bureaucrat::incrementGrade(void)
 			throw Bureaucrat::GradeTooHighException();
 		this->_grade--;
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -69,7 +70,7 @@ void Bureaucrat::decrementGrade(void)
 			throw Bureaucrat::GradeTooLowException();
 		this->_grade++;
 	}
-	catch(const std::exception& e)
+	catch(const std::exception &e)
 	{
 		std::cout << e.what() << std::endl;
 	}
@@ -77,12 +78,29 @@ void Bureaucrat::decrementGrade(void)
 
 const char *Bureaucrat::GradeTooHighException::what(void) const throw()
 {
-	return "The grade is too high.";
+	return "Bureaucrat: The grade is too high.";
 }
 
 const char *Bureaucrat::GradeTooLowException::what(void) const throw()
 {
-	return "The grade is too low.";
+	return "Bureaucrat: The grade is too low.";
+}
+
+void		Bureaucrat::signeForm(Form &form)
+{
+	try 
+	{
+		form.beSigned(*this);
+		std::cout << this->getName() << " signs ";
+		std::cout << form.getName() << std::endl;
+	}
+	catch(Form::GradeTooLowException &e)
+	{
+		std::cout << this->getName() << " cannot sign ";
+		std::cout << form.getName() << " because ";
+		std::cout << e.what() << std::endl;
+	}
+
 }
 
 std::ostream	&operator<<(std::ostream &out, Bureaucrat const &bureaucrat)
