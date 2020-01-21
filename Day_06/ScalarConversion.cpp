@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   main.cpp                                         .::    .:/ .      .::   */
+/*   ScalarConversion.cpp                             .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/21 10:19:36 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 11:01:16 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/21 10:54:04 by bpajot       #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/21 10:59:23 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include 
+#include "ScalarConversion.hpp"
 
-int main(int argc, char **argv)
+ScalarConversion::ScalarConversion(std::string const scalar) : _scalar(scalar)
 {
-	
+}
+
+ScalarConversion::~ScalarConversion(void)
+{
 }
