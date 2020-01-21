@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/21 10:19:36 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 12:38:40 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 15:44:56 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		try
 		{
 			char c = static_cast<char>(sc);
-			std::cout << c << std::endl;
+			std::cout << "'" << c << "'" << std::endl;
 		}
 		catch (std::exception &e)
 		{

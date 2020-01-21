@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/21 10:54:04 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 12:37:42 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 15:56:58 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -23,17 +23,24 @@ ScalarConversion::~ScalarConversion(void)
 
 ScalarConversion::operator char(void)
 {
-	if (this->_scalar.length() == 1)
-		if (this->_scalar[0] >= '0'
-			&& this->_scalar[0] <= '9')
-			throw ScalarConversion::NonDisplayableException();
+	try
+	{
+		int		value = std::stoi(this->_scalar);
+		if (value >= 32 && value <= 126)
+			return((char)value);
 		else
-			return (char)this->_scalar[0];
-	else if (this->_scalar[0] == '4'
-		&& this->_scalar[1] == '2')
-		throw ScalarConversion::FourtyTwoException();
-	else
+		{
+			throw ScalarConversion::NonDisplayableException();
+		}
+	}
+	catch(const std::invalid_argument &e)
+	{
 		throw ScalarConversion::ImpossibleException();
+	}
+	catch(const std::out_of_range &e)
+	{
+		throw ScalarConversion::ImpossibleException();
+	}
 }
 
 ScalarConversion::operator int(void)
@@ -81,9 +88,4 @@ const char *ScalarConversion::NonDisplayableException::what(void) const throw()
 const char *ScalarConversion::ImpossibleException::what(void) const throw()
 {
 	return "impossible";
-}
-
-const char *ScalarConversion::FourtyTwoException::what(void) const throw()
-{
-	return "'*'";
 }
