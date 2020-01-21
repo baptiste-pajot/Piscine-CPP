@@ -6,12 +6,13 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/21 10:19:36 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 12:09:15 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 12:38:40 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "ScalarConversion.hpp"
 //#include "Char.hpp"
 //#include "Int.hpp"
@@ -46,7 +47,25 @@ int main(int argc, char **argv)
 		{
 			std::cout << e.what() << std::endl;
 		}
-		std::cout << "float: " << argv[1] << std::endl;
-		std::cout << "double: " << argv[1] << std::endl;
+		std::cout << "float: ";
+		try
+		{
+			float f = static_cast<float>(sc);
+			std::cout << std::fixed << std::setprecision(1) << f << "f" << std::endl;
+		}
+		catch(const std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
+		std::cout << "double: ";
+		try
+		{
+			float d = static_cast<double>(sc);
+			std::cout << std::fixed << std::setprecision(1) << d << std::endl;
+		}
+		catch(const std::exception &e)
+		{
+			std::cout << e.what() << std::endl;
+		}
 	}
 }

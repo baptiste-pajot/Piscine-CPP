@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/21 10:54:04 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 12:18:45 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 12:37:42 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -37,15 +37,40 @@ ScalarConversion::operator char(void)
 }
 
 ScalarConversion::operator int(void)
-{
-	if ((this->_scalar[0] >= '0'
-		&& this->_scalar[0] <= '9')
-		|| this->_scalar[0] == '-')
+{	
+	try
+	{
 		return std::stoi(this->_scalar);
-	else
+	}
+	catch(const std::exception &e)
+	{
 		throw ScalarConversion::ImpossibleException();
+	}
 }
 
+ScalarConversion::operator float(void)
+{
+	try
+	{
+		return std::stof(this->_scalar);
+	}
+	catch(const std::exception &e)
+	{
+		throw ScalarConversion::ImpossibleException();
+	}
+}
+
+ScalarConversion::operator double(void)
+{
+	try
+	{
+		return std::stod(this->_scalar);
+	}
+	catch(const std::exception &e)
+	{
+		throw ScalarConversion::ImpossibleException();
+	}
+}
 
 
 const char *ScalarConversion::NonDisplayableException::what(void) const throw()
