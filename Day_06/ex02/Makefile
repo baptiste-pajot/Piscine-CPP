@@ -6,18 +6,18 @@
 #    By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+      #
 #                                                  #+#   #+    #+    #+#       #
 #    Created: 2020/01/21 14:45:36 by bpajot       #+#   ##    ##    #+#        #
-#    Updated: 2020/01/21 14:46:22 by bpajot      ###    #+. /#+    ###.fr      #
+#    Updated: 2020/01/21 14:50:18 by bpajot      ###    #+. /#+    ###.fr      #
 #                                                          /                   #
 #                                                         /                    #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
 
-NAME = serializer
+NAME = identifier
 CC = clang++
 CC_FLAGS = -Wall -Wextra -Werror
 FILES = main.cpp \
-		DataClass.cpp 
+		Base.cpp 
 
 SRCS = $(FILES)
 OBJS = $(FILES:.cpp=.o)
