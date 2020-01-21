@@ -6,7 +6,7 @@
 /*   By: bpajot <bpajot@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2020/01/21 10:52:27 by bpajot       #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/21 12:05:49 by bpajot      ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/21 12:16:02 by bpajot      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -40,6 +40,11 @@ class ScalarConversion
 				virtual const char* what(void) const throw();
 		};
 		class ImpossibleException : public std::exception
+		{
+			public:
+				virtual const char* what(void) const throw();
+		};
+		class FourtyTwoException : public std::exception
 		{
 			public:
 				virtual const char* what(void) const throw();
